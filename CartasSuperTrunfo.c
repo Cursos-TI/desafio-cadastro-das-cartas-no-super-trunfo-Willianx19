@@ -65,10 +65,10 @@ float Area02;
 float Pib02;
 int Numero_turistico02;
 float densidade_popu2;
-float Pib_perca2
+float Pib_perca2;
 
 //printf e scanf da Carta 02, entrada dados
-printf("Carta 02: \n");
+printf("Carta 01: \n");
 
 printf("Digite o Estado 02: \n");
 scanf("%s",&Estado02);
