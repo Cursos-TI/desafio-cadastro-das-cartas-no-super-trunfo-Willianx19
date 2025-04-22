@@ -14,6 +14,7 @@ float Pib;
 int Numero_de_Pontos_Turisticos;
 float densidade_popu;
 float Pib_percap;
+float Super_poder;
 
 // printf e scanf da Carta 01, entrada dados
 printf("Carta 01: \n");
@@ -43,6 +44,9 @@ scanf("%d",&Numero_de_Pontos_Turisticos);
 densidade_popu = (float) Populacao / Area;
 Pib_percap = (float) Pib / Populacao;
 
+// Soma do Super Poder
+Super_poder = Populacao + Area + Pib + Numero_de_Pontos_Turisticos + densidade_popu;
+
 // printf de saída de dados da carta 01
 printf("O Estado é: %c \n",Estado);
 printf("O Código da Cidade é: %s \n",Codigo_da_Carta);
@@ -53,6 +57,7 @@ printf("O Pib é: %f bilhões de reais \n",Pib);
 printf("o Números de Pontos Turisticos são: %d \n",Numero_de_Pontos_Turisticos);
 printf("A Densidade Populacinal é: %f \n",densidade_popu);
 printf("O Pib per capita é:%f \n",Pib_percap);
+printf("o Super poder é: %f \n",Super_poder);
 
 //   Cartão 02   //
 
@@ -66,6 +71,7 @@ float Pib02;
 int Numero_turistico02;
 float densidade_popu2;
 float Pib_perca2;
+float super_poder2;
 
 //printf e scanf da Carta 02, entrada dados
 printf("Carta 01: \n");
@@ -95,6 +101,9 @@ scanf("%d",&Numero_turistico02);
 densidade_popu2 = (float) Populacao02 / Area02;
 Pib_perca2 = (float) Pib02 / Populacao02;
 
+// Soma do Super Poder
+super_poder2 = Populacao02 + Area02 + Pib02 + Numero_turistico02 + densidade_popu2;
+
 // printf de saída de dados da carta 02
 printf("O Estado da Carta 2 é: %c \n",Estado02);
 printf("o Codigo 02 é: %s \n",Codigo_do_Estado02);
@@ -105,8 +114,28 @@ printf("O Pib 02 é: %f bilhões de reais \n",Pib02);
 printf("Os Números de Pontos Turisticos 02 são: %d \n",Numero_turistico02);
 printf("A Densidade populacional é:%f \n",densidade_popu2);
 printf("O Pib per capita é:%f \n",Pib_perca2);
+printf("o Super poder é : %f \n",super_poder2);
 
+// Comparação das cartas
+int resultado,resultado2,resultado3,resultado4,resultado5,resultado6,resultado7;
 
+resultado = Populacao > Populacao02;
+resultado2 = Area > Area02;
+resultado3 = Pib > Pib02;
+resultado4 = Numero_de_Pontos_Turisticos > Numero_turistico02;
+resultado5 = densidade_popu < densidade_popu2;
+resultado6 = Pib_percap > Pib_perca2;
+resultado7 = Super_poder > super_poder2;
+
+// Printf das Comparações
+printf("Comparação das Cartas: \n");
+printf("População: carta 0! venceu (%f) \n",resultado);
+printf("Área: carta 01 venceu (%f) \n",resultado2);
+printf("Pib: carta 01 venceu (%d) \n",resultado3);
+printf("Pontos Turisticos: carta 01 venceu (%f) \n",resultado4);
+printf("Densidade populacional: carta 02 venceu (%f) \n",resultado5);
+printf("Pib per capita: carta 01 venceu (%f) \n",resultado6);
+printf("Super poder: Carta 01 venceu (%d) \n",resultado7);
 
 
     return 0;
